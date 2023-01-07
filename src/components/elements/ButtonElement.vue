@@ -14,14 +14,17 @@ defineProps({
 
 <style scoped lang="scss">
 button {
+  font-family: cursive;
     height: 30px;
-    width: 100px;
+    width: 95px;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    text-shadow: 1px 1px 2px gray;
+  animation: button_animation 3s linear infinite;
   &:hover{
-    color: blueviolet;
-    font-size: 92%;
-    border-radius: 8px;
+    color: darkgreen;
+    font-size: 85%;
   }
 }
     .nav_button{
@@ -33,9 +36,24 @@ button {
     .link_button{
 
     }
-@media (max-width: 350px) {
-  button{
-    width: 95px;
+@keyframes button_animation {
+  0% {
+    background-color: rgba(blueviolet,0.1);
+  }
+  20% {
+    background-color: rgba(blueviolet,0.2);
+  }
+  40% {
+    background-color: rgba(blueviolet,0.3);
+  }
+  60% {
+    background-color: rgba(blueviolet,0.5);
+  }
+  80% {
+    background-color: rgba(blueviolet,0.25);
+  }
+  100% {
+    background-color: rgba(blueviolet,0.1);
   }
 }
 </style>

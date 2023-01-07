@@ -1,10 +1,20 @@
 <template>
     <div class="__grid">
-        <app-header class="__header"/>
-        <app-navigation  class="__navigation"/>
-        <app-personal  class="__personal"/>
-        <app-skills  class="__skills"/>
-        <app-footer  class="__footer"/>
+        <div class="__header">
+            <app-header/>
+        </div>
+        <div class="__navigation">
+            <app-navigation/>
+        </div>
+        <div class="__personal">
+            <app-personal/>
+        </div>
+        <div class="__skills">
+            <app-skills/>
+        </div>
+        <div class="__footer">
+            <app-footer/>
+        </div>
     </div>
 </template>
 
@@ -16,6 +26,38 @@ import AppSkills from "@/components/AppSkills";
 import AppFooter from "@/components/AppFooter";
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .__grid{
+      grid-gap: 20px;
+      grid-template-areas:
+      "head head head"
+      "nav nav nav"
+      "pers skill skill"
+      "foot foot foot";
+      grid-template-rows: 17% 80px 1fr 10%;
+      grid-template-columns: 1.3fr 1fr;
+    }
+@media (max-width: 1000px) {
+  .__grid{
+    grid-template-rows: 12% 80px 1.5fr 10%;
+  }
+  .__header{
+    margin-top: 55%;
+  }
+}
+@media (max-width: 565px) {
+  .__grid {
+    grid-template-areas:
+      "nav head head"
+      ". . ."
+      "pers pers pers"
+      "skill skill skill"
+      "foot foot foot";
+      grid-template-rows: 7% 0 1fr 1.9fr auto;
+  }
+  .__header{
+    transform: translate(-40%, 20%);
+  }
 
+}
 </style>

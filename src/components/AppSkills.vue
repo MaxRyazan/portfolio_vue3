@@ -60,4 +60,11 @@ span{
               0.3em 0.3em 1em rgba(0,0,0,0.1);
     }
 }
+@media (max-width: 1000px){
+  .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 150px);
+    grid-auto-rows: 150px;
+  }
+}
 </style>
