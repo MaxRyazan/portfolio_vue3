@@ -22,7 +22,8 @@
             <span>Vue3</span> Composition / Option API, Actions, Getters, Watchers, Mutations
         </div>
         <div class="element">
-            <span>Rest Api</span> Full Rest API integration (backend + frontend)
+            <span>Rest Api</span> Spring boot + Vue3/ Node.js + Vue3.
+            <p>Full Rest API integration (backend + frontend)</p>
         </div>
     </div>
 </template>
