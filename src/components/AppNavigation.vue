@@ -1,10 +1,7 @@
 <template>
     <div class="grid">
         <div class="item">
-            <button-element :title="`Java+Spring`" @click="$router.push('/java-spring')"/>
-        </div>
-        <div class="item">
-            <button-element :title="`Spring + Vue3`" @click="$router.push('/vue3')"/>
+            <button-element :title="`Spring + Vue3`" @click="$router.push('/java-vue')"/>
         </div>
         <div class="item">
             <button-element :title="`Node+Vue3`" @click="$router.push('/node-vue')"/>
@@ -14,6 +11,9 @@
         </div>
         <div class="item">
             <button-element :title="`Blocks`" @click="$router.push('/blocks')"/>
+        </div>
+        <div class="item">
+            <button-element :title="`Information`" @click="$router.push('/info')"/>
         </div>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <div class="grid">
-        <div class="element" @click.stop="$router.push('/java-spring')">
+        <div class="element" @click.stop="$router.push('/java-vue')">
             <span>Java</span>  Collections, Stream API, Exceptions, Testing(jUnit, Mockito), JSON
         </div>
         <div class="element">
