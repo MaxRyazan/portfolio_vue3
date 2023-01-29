@@ -35,13 +35,39 @@
                             <li>Adminer image</li>
                         </ul>
                     </div>
-                    <div class="screenshots test">
+                    <div class="screenshots">
                         <div class="slider__outer">
                             <div class="slider__inner" ref="slider">
+                                <div class="slider__item">
+                                    <img src="../assets/images/cup_of_java.png" class="slider__image" alt="">
+                                    <p>
+                                        1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+                                        dignissimos dolor fugit hic, porro reprehenderit repudiandae sed sint
+                                        velit! Autem earum error harum, ipsum nisi nobis omnis quia quidem ullam?
+                                    </p>
+                                </div>
+                                <div class="slider__item">
+                                    <img src="../assets/images/cup_of_java.png" class="slider__image" alt="">
+                                    <p>
+                                        2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+                                        dignissimos dolor fugit hic, porro reprehenderit repudiandae sed sint
+                                        velit! Autem earum error harum, ipsum nisi nobis omnis quia quidem ullam?
+                                    </p>
+                                </div>                                <div class="slider__item">
                                 <img src="../assets/images/cup_of_java.png" class="slider__image" alt="">
-                                <img src="../assets/images/vue.png" class="slider__image" alt="">
-                                <img src="../assets/images/client.png" class="slider__image" alt="">
+                                <p>
+                                    3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+                                    dignissimos dolor fugit hic, porro reprehenderit repudiandae sed sint
+                                    velit! Autem earum error harum, ipsum nisi nobis omnis quia quidem ullam?
+                                </p>
+                            </div>                                <div class="slider__item">
                                 <img src="../assets/images/cup_of_java.png" class="slider__image" alt="">
+                                <p>
+                                    4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
+                                    dignissimos dolor fugit hic, porro reprehenderit repudiandae sed sint
+                                    velit! Autem earum error harum, ipsum nisi nobis omnis quia quidem ullam?
+                                </p>
+                            </div>
                             </div>
                         </div>
                         <button @click="slide">вперед</button>
@@ -57,7 +83,7 @@ import {ref, watch} from "vue";
 
 const notebook = ref(false)
 let slider = ref('')
-let count = 0
+let count = 1
 
 const show = (param) => {
     switch (param){
@@ -70,10 +96,10 @@ const show = (param) => {
 
 
 const slide = () => {
-    count++
     let max_count = slider.value.children.length
     document.querySelector('.slider__inner').style.transform = `translate(-${slider.value.clientWidth * count}px)`
-    if(count === max_count - 1) {
+    count++
+    if(count === max_count) {
         count = 0
     }
 }
@@ -89,33 +115,25 @@ watch(notebook, (newValue) => {
 </script>
 
 <style scoped>
-.test{
-    border: 1px solid red;
-}
 .slider__outer{
     max-width: 100%;
     height: 300px;
     position: relative;
     overflow: hidden;
 }
-.__slider_image_container{
-    width: 100%;
-    height: 300px;
-    border: 1px solid green;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-}
 .slider__inner{
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
     height: 300px;
-    border: 1px solid red;
+
 }
 .slider__image{
-    border: 1px solid black;
+    width: 50%;
+}
+.slider__item{
     min-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
 }
 </style>
