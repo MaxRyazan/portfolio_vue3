@@ -80,6 +80,7 @@
 }
 
 .desc {
+  min-width: 500px;
   padding: 6px;
   border-right: 2px solid black;
   font-family: cursive;

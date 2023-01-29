@@ -36,40 +36,73 @@
                         </ul>
                     </div>
                     <div class="screenshots">
+<!--Слайдер начало ------------------------------------------------------------------------->
                         <div class="slider__outer">
                             <div class="slider__inner" ref="slider">
+            <!--Элемент-1 начало ----------------------------------------------------------->
                                 <div class="slider__item">
-                                    <img src="../assets/images/cup_of_java.png" class="slider__image" alt="">
-                                    <p>
-                                        1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
-                                        dignissimos dolor fugit hic, porro reprehenderit repudiandae sed sint
-                                        velit! Autem earum error harum, ipsum nisi nobis omnis quia quidem ullam?
-                                    </p>
+                                    <div class="slide__image__container">
+                                        <img src="../assets/images/structure.png" class="slider__image" alt="">
+                                    </div>
+                                    <div>
+                                        <span>
+                                            Модульный проект.
+                                        </span>
+                                        <ul>
+                                            <li>
+                                                backend - node.js
+                                            </li>
+                                            <li>
+                                                frontend - vue3.js
+                                            </li>
+                                        </ul>
+                                        <span>
+                                            Присутствует файл docker-compose.yml с помощью которого можно запустить проект
+                                            в режиме контейнеров. Тома для разработки отсутствуют, так как  проект завершен.
+                                        </span>
+                                    </div>
                                 </div>
+            <!--Элемент-1 конец ----------------------------------------------------------->
                                 <div class="slider__item">
-                                    <img src="../assets/images/cup_of_java.png" class="slider__image" alt="">
-                                    <p>
-                                        2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
-                                        dignissimos dolor fugit hic, porro reprehenderit repudiandae sed sint
-                                        velit! Autem earum error harum, ipsum nisi nobis omnis quia quidem ullam?
-                                    </p>
-                                </div>                                <div class="slider__item">
-                                <img src="../assets/images/cup_of_java.png" class="slider__image" alt="">
-                                <p>
-                                    3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
-                                    dignissimos dolor fugit hic, porro reprehenderit repudiandae sed sint
-                                    velit! Autem earum error harum, ipsum nisi nobis omnis quia quidem ullam?
-                                </p>
-                            </div>                                <div class="slider__item">
-                                <img src="../assets/images/cup_of_java.png" class="slider__image" alt="">
-                                <p>
-                                    4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti
-                                    dignissimos dolor fugit hic, porro reprehenderit repudiandae sed sint
-                                    velit! Autem earum error harum, ipsum nisi nobis omnis quia quidem ullam?
-                                </p>
-                            </div>
+                                    <div class="slide__image__container">
+                                        <img src="../assets/images/backend-prev.png" class="slider__image" alt="">
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Логика проекта разбита на части, для лучшей читаемости кода, и простоты поддержки.
+                                        </p>
+                                    </div>
+                                </div>
+            <!--Элемент-2 конец ----------------------------------------------------------->
+                                <div class="slider__item">
+                                    <div class="slide__image__container">
+                                        <img src="../assets/images/backend-controller.png" class="slider__image" alt="">
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Экспортируемый класс, описывающий методы работы CRUD с базой данных.
+                                            Логика работы программы не предполагает update - метода.
+                                        </p>
+                                        <p>
+                                            Работает в связке с express router.
+                                        </p>
+                                    </div>
+                                </div>
+            <!--Элемент-3 конец ----------------------------------------------------------->
+                                <div class="slider__item">
+                                    <div class="slide__image__container">
+                                        <img src="../assets/images/backend-router.png" class="slider__image" alt="">
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Краткое и лаконичное описание роутинга бэкэнд сервиса)
+                                        </p>
+                                    </div>
+                                </div>
+            <!--Элемент-4 конец ----------------------------------------------------------->
                             </div>
                         </div>
+<!--Слайдер конец ------------------------------------------------------------------------->
                         <button @click="slide">вперед</button>
                     </div>
                 </div>
@@ -114,26 +147,6 @@ watch(notebook, (newValue) => {
 });
 </script>
 
-<style scoped>
-.slider__outer{
-    max-width: 100%;
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-}
-.slider__inner{
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 300px;
-
-}
-.slider__image{
-    width: 50%;
-}
-.slider__item{
-    min-width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-}
+<style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
 </style>
