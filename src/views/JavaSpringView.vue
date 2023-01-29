@@ -20,11 +20,60 @@
                 <img src="@/assets/images/cup_of_java.png" alt="" class="img">
                 <span class="rest">RestApi</span>
             </button>
-
         </div>
         <div v-if="showBank">
             <div class="wrapper">
-                <h3>Bank</h3>
+                <div class="desc">
+                    <p>
+                        Мой первый крупный проект. Написан на Spring MVC, java 11. За отображение
+                        отвечает чистый html, с примесью bootstrap5 и всё это сдобрено изрядной порцией шаблонизатора thymeleaf.
+                    </p>
+                    <p>
+                        За авторизацию отвечает spring security, в своём базовом виде - вход по паролю и номеру телефона.
+                    </p>
+                    <p>
+                        Тестирование работы методов производилось с помощью jUnit5 и Mockito.
+                    </p>
+                    <ul>
+                        <li>
+                            В проекте присутствует полная имитация работы банка - можно пополнять счет (через
+                            доп. программу-терминал), делать переводы, брать кредиты и платить по ним.
+                        </li>
+                        <li>
+                            Так же можно покупать валюту - доллары и евро. Доступны вклады и инвестиции в драг. металлы.
+                            Актуальные курсы валют и стоимость металлов приходят с бесплатных API. Динамика изменения
+                            цен сохраняется в базе данных, поэтому есть возможность следить за волатильностью.
+                        </li>
+                        <li>
+                            В одном из последних обновлений на данный момент, я прикрутил возможность оформлять в банке
+                            ОСАГО. Мок-данные по рейтингу аварийности я беру с другого своего API.
+                        </li>
+                        <li>
+                            Так же есть настройки - в настроящее время из нескольких пунктов - подтверждение перевода, если
+                            сумма выше какого то порога и смена пароля с отправкой проверочного кода на почту.
+                        </li>
+                    </ul>
+                        <p>
+                            Может быть фронт проекта будет переписан на Vue.js, но на данный момент конкретных планов - нет.
+                        </p>
+                </div>
+                <div class="screenshots">
+                    <button class="btn_left"> &lt;= </button>
+                    <button class="btn_right"> =&gt; </button>
+                    <div class="wrapper_for_screen">
+                        <div class="screen">
+                            <img src="@/assets/images/client.png" alt="11" class="screen_img">
+                        </div>
+                        <div class="screen_text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Aut beatae, culpa dolore doloremque enim error est, e
+                                xercitationem explicabo hic iusto nobis numquam obcaecati q
+                                uam quas soluta ullam veniam veritatis voluptatem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div v-if="showTerminal">
@@ -46,7 +95,7 @@
 </template>
 
 <script setup>
-import {ref, watch} from "vue";
+import { ref, watch } from "vue";
 
 const showBank = ref(false)
 const showTerminal = ref(false)
@@ -118,51 +167,5 @@ watch(rest, (newValue) => {
 </script>
 
 <style scoped lang="scss">
-.container{
-    width: 100%;
-    height: calc(100vh + 65px);
-    position: relative;
-}
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  & h4{
-    font-family: cursive;
-  }
-}
-.button{
-    width: 150px;
-    height: 30px;
-    position: relative;
-    background-color: white;
-    border-radius: 4px;
-    font-family: cursive;
-    &:hover{
-      cursor: pointer;
-      box-shadow: 0 0 4px black;
-    }
-    &:active{
-      box-shadow: none;
-    }
-}
-.img{
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-.wrapper{
-  width: 90%;
-  padding: 10px;
-  margin: 0 auto;
-  height: 100vh;
-  box-shadow: 0 0 6px;
-  border-radius: 6px;
-}
-.href{
-  text-decoration: none;
-  color: #648eff;
-}
+
 </style>

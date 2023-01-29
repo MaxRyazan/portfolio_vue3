@@ -16,7 +16,7 @@ defineProps({
 button {
   font-family: cursive;
     height: 30px;
-    width: 95px;
+    width: 110px;
     background-color: white;
     border: 1px solid blueviolet;
     border-radius: 10px;

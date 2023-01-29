@@ -6,19 +6,19 @@
         <div class="element">
             <span>Database</span> MySql, Postgres, H2  <p>3 NF, many-to-one, many-to-many, one-to-many, one-to-one</p>
         </div>
-        <div class="element">
+        <div class="element" @click="$router.push('/java-spring')">
             <span>Spring</span> Boot, Data, Security, MVC, REST, Exceptions, Hibernate, Redis, Swagger, Liquibase
         </div>
         <div class="element">
             <span>Html5 /Css / Scss</span> FlexBox, Grid, adaptive, animations, media / mixins, extends, variables
         </div>
         <div class="element">
-            <span>JavaScript</span> Arrays, Async/await, fetch
+            <span>JavaScript / Node.js</span> Arrays, Async/await, fetch
         </div>
         <div class="element">
             <span>Sql</span> select, join, order by, insert, update, delete
         </div>
-        <div class="element">
+        <div class="element" @click="$router.push('/vue3')">
             <span>Vue3</span> Composition / Option API, Actions, Getters, Watchers, Mutations
         </div>
         <div class="element">

@@ -42,10 +42,10 @@ import AppFooter from "@/components/AppFooter";
     grid-template-rows: 12% 80px 1.5fr 10%;
   }
   .__header{
-    margin-top: 55%;
+    margin-top: 0;
   }
 }
-@media (max-width: 565px) {
+@media (max-width: 605px) {
   .__grid {
     grid-template-areas:
       "nav head head"
@@ -58,6 +58,14 @@ import AppFooter from "@/components/AppFooter";
   .__header{
     transform: translate(-40%, 20%);
   }
-
 }
+    @media (max-width: 400px) {
+      .__header{
+        display: none;
+      }
+      .__navigation{
+        grid-column: 1/3;
+        margin: 0 auto;
+      }
+    }
 </style>

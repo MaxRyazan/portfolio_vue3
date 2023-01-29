@@ -1,19 +1,19 @@
 <template>
     <div class="grid">
         <div class="item">
-            <button-element :title="`Java/Spring`" @click="$router.push('/java-spring')"/>
+            <button-element :title="`Java+Spring`" @click="$router.push('/java-spring')"/>
         </div>
         <div class="item">
-            <button-element :title="`Vue3 / Js`" />
+            <button-element :title="`Spring + Vue3`" @click="$router.push('/vue3')"/>
         </div>
         <div class="item">
-            <button-element :title="`Integrations`" />
+            <button-element :title="`Node+Vue3`" @click="$router.push('/node-vue')"/>
         </div>
         <div class="item">
-            <button-element :title="`Flex / Grid`" />
+            <button-element :title="`Вёрстка`" @click="$router.push('/verstka')"/>
         </div>
         <div class="item">
-            <button-element :title="`Blocks`" />
+            <button-element :title="`Blocks`" @click="$router.push('/blocks')"/>
         </div>
     </div>
 </template>
@@ -29,7 +29,7 @@ import ButtonElement from '@/components/elements/ButtonElement'
       margin: 20px;
       justify-items: center;
     }
-    @media (max-width: 565px) {
+    @media (max-width: 605px) {
       .grid{
         grid-template-columns: 1fr;
         justify-items: start;
